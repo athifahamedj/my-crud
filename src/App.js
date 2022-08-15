@@ -1,6 +1,7 @@
-import react, { useState } from "react";
+import React, { useState } from "react";
 import User from "./components/UI/User";
 import UsersList from "./components/UI/UserLists";
+
 function App() {
 	const [usersList, setUsers] = useState([]);
 
@@ -18,10 +19,10 @@ function App() {
 	};
 
 	return (
-		<div>
+		<React.Fragment>
 			<User sendData={userDetails} />
 			<UsersList users={usersList} />
-		</div>
+		</React.Fragment>
 	);
 }
 
